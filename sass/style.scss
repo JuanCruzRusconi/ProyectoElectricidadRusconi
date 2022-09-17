@@ -11,7 +11,7 @@ h1 {
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   word-spacing: 3px;
   padding: 5px;
   border: 5px solid black;
@@ -41,7 +41,7 @@ header .nav {
 .ul-flex {
   width: 100%;
   padding: 5px;
-  margin: 20px;
+  margin: 30px 20px 20px 20px;
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +63,7 @@ header .nav {
 a:hover {
   color: rgb(0, 0, 151);
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
 }
 
 // ------- Main ------- //
@@ -75,24 +75,47 @@ main {
   text-align: center;
   background-color: rgb(125, 125, 125);
   color: black;
+  padding: 15px;
+  margin: 10px 31px 10px 31px;
+}
+
+.section1 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgb(125, 125, 125);
+  color: black;
   padding: 30px;
-  border: 5px solid black;
-  margin: 2px 27px 0px 27px;
+  margin: 2px 31px 0px 31px;
 }
 
 .p1 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 300;
   text-align: center;
-  color: black;
-  padding: 5px;
-  margin: 0px 0px 15px 0px;
+  letter-spacing: 1.5px;
+  color: rgb(255, 255, 255);
+  padding: 25px;
+  margin: 15px 20px 15px 20px;
+}
+
+
+.p3 {
+   font-size: 20px;
+   font-weight: 300;
+   text-align: center;
+   letter-spacing: 1.5px;
+   color: white;
+   padding: 20px;
+   margin: 15px 50px 25px 50px;
+
+
 }
 
 .video1 {
   width: 350px;
   height: 200px;
-  margin: 0px 10px 10px 10px;
+  margin: 0px 10px 0px 10px;
 }
 
 // ------- Footer ------- //
@@ -101,7 +124,7 @@ footer {
   color: white;
   background-color: rgb(59, 59, 59);
   padding: 30px;
-  margin: 30px 32px 45px 32px;
+  margin: 40px 31px 45px 31px;
 }
 
 footer h2 {
@@ -132,18 +155,6 @@ footer h2 {
   color: black;
 }
 
-
-
-.section1 {
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  background-color: rgb(125, 125, 125);
-  color: black;
-  padding: 30px;
-  border: 5px solid black;
-  margin: 2px 27px 20px 27px;
-}
 
 .redes {
   display: flex;
