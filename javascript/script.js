@@ -59,6 +59,8 @@ let productoB = new Producto("Plafon", 500, 30)
 
 let precioTotal = 0
 
+let productoC = new Producto("Lampara", 200, 0)
+
 /*console.log(productoB)*/
 
 // ------- Control de flujos ------- //
@@ -82,8 +84,8 @@ else {
 }
 */
 
-
-alert("Estos son nuestros productos: \n - Colgantes\n - Plafon")
+//\n - Colgantes\n - Plafon +
+alert("Estos son nuestros productos: \n - Colgantes\n - Plafon\n - Lampara")
 
 // ------- Ciclo de compra con FOR ------- //
 
@@ -170,3 +172,57 @@ else{
 
 
 //// -------- HASTA CLASE 5 -------- ////
+
+
+// ------- Arrays ------- //
+
+// Enumeracion              0           1       2    3 //
+/*let listaDeProductos = ["Colgantes", "Plafon" , 8, "algo"]*/
+
+/*
+let algoDos = listaDeProductos[2]
+console.log(algoDos)
+
+for (let i = 0; i <= 3; i++)
+    console.log (istaDeProductos[i])
+*/
+
+// -- Propiedad lenght -- //
+
+/*console.log (listaDeProductos.length)*/
+/*
+for(let i = 0; i < listaDeProductos.lenght; i++){
+    console.log (listaDeProductos[i])
+}
+
+let nombre = prompt("ingrese")
+listaDeProductos.push(nombre)
+*/
+ // -- Metodos/Propiedades: push, unshift, shift, pop, join, concat, splice, slice, include, reverse -- //
+
+ let listaDeProductos = [productoA, productoB]
+
+ console.log(listaDeProductos.length)
+
+ let listaNombres = []
+ 
+ for(const producto of listaDeProductos){
+    if(producto.stock > 0){
+        listaNombres.push(producto.nombre)
+    } 
+    
+ }
+
+  console.log(listaNombres)
+
+
+  // ------- Funciones de orden superior ------- //
+
+  let listaProductos = [productoA, productoB, productoC]
+
+  let listaProductosConStock = listaProductos.filter((prod) => prod.stock > 0)
+ 
+  for(const producto of listaProductos){
+  let listaNombres = listaProductosConStock.map((prod) => producto.nombre)
+  }
+  
