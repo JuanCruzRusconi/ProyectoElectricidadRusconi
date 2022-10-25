@@ -85,7 +85,7 @@ else {
 */
 
 //\n - Colgantes\n - Plafon +
-alert("Estos son nuestros productos: \n - Colgantes\n - Plafon\n - Lampara")
+/*alert("Estos son nuestros productos: \n - Colgantes\n - Plafon\n - Lampara")*/
 
 // ------- Ciclo de compra con FOR ------- //
 
@@ -226,3 +226,22 @@ listaDeProductos.push(nombre)
   let listaNombres = listaProductosConStock.map((prod) => producto.nombre)
   }
   
+
+  // ------- DOM ------- //
+
+  // --- Nodos --- //
+
+  let catalogo = document.getElementById("catalogo")
+
+  for(const producto of listaProductosConStock){
+
+  let card = document.createElement("div")
+
+  card.className = "card"
+
+  card.innerHTML = `<h2>${producto.nombre}</h2><p>algo</p>`
+
+  catalogo.append(card)
+  }
+  // --- Propiedades
+
