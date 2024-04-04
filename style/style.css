@@ -70,11 +70,13 @@ header .nav {
 .a0 {
   text-decoration: none;
   color: white;
+  transition: 0.3s;
 }
 
 .a1 {
   text-decoration: none;
   color: rgb(0, 0, 0);
+  transition: 0.3s;
 }
 
 .a0:hover {
@@ -86,16 +88,19 @@ a:hover {
   color: rgb(0, 0, 151);
   font-weight: 700;
   letter-spacing: 3.5px;
+  transition: 0.5s;
 }
 
 .home {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  background-color: rgb(157, 157, 157);
+  background-color: rgb(185, 185, 185);
   color: black;
   padding: 15px;
   margin: 10px 31px 10px 31px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-radius: 40px;
 }
 
@@ -103,15 +108,35 @@ a:hover {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  background-color: rgb(170, 170, 170);
+  background-color: rgb(200, 200, 200);
   border-radius: 40px;
   color: black;
   padding: 30px;
-  margin: 2px 31px 0px 31px;
+  margin: 10px 31px 20px 31px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.title-sections {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text-sections {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);;
+  padding: 20px;
+  margin: 0px 50px 10px 50px;
 }
 
 #catalogo {
-  background-color: rgb(49, 0, 97);
   height: 200px;
 }
 
@@ -134,7 +159,7 @@ a:hover {
 
 .form-title {
   color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
@@ -191,20 +216,10 @@ a:hover {
   margin: 15px 50px 25px 50px;
 }
 
-.p4 {
-  font-size: 20px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 1.5px;
-  color: white;
-  padding: 20px;
-  margin: 0px 50px 10px 50px;
-}
-
-.img1 {
-  width: 370px;
-  height: 230px;
-  margin: 0px 10px 0px 10px;
+.home-image {
+  width: 700px;
+  height: 500px;
+  margin: 0px 10px 30px 10px;
 }
 
 footer {
