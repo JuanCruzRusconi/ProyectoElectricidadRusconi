@@ -1,40 +1,62 @@
 @import "fuentes";
 @import "body";
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(219, 219, 219);
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 // ------- Título ------- //
 
 .navBar-container {
   height: 70px;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: rgb(0, 0, 151);
   margin: 15px 20px 0 15px;
   border-radius: 20px;
 }
 
-h1 {
-  background-color: rgb(0, 0, 151);
+.brand {
   font-style: italic;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 22px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  word-spacing: 3px;
-  padding: 5px;
-  border: 5px solid black;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.brand-link:hover {
+  color: white;
+  letter-spacing: 5px;
 }
 
 // ------- Header ------- //
 
-.header {
+.menu-container {
   height: 500px;
   width: 100%;
   }
 
 
-header .nav {
+.menu-container .nav {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -47,15 +69,15 @@ header .nav {
   background-color: rgb(59, 59, 59);
 }
 
-.ul-flex {
+.nav-list {
   width: 100%;
   padding: 5px;
-  margin: 30px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
   display: flex;
   flex-direction: column;
 }
 
-.ul-flex li {
+.nav-list li {
   list-style-type: none;
   margin: 10px;
   padding: 10px;
@@ -64,31 +86,33 @@ header .nav {
   border-radius: 15px;
 }
 
-.a0 {
-   text-decoration: none;
-   color: white;
-}
-
-.a1 {
-  text-decoration: none;
+.nav-link {
   color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.a0:hover {
-  color: white;
-  letter-spacing: 5px;
-}
-
-a:hover {
+.nav-link:hover {
   color: rgb(0, 0, 151);
-  font-weight: 700;
-  letter-spacing: 3.5px;
+  transform: scale(1.15);
+  letter-spacing: 1.5px;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 // ------- Main ------- //
 
 
-.home {
+.main-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   font-weight: 500;
   text-align: center;
@@ -100,6 +124,10 @@ a:hover {
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   font-weight: 500;
   text-align: center;
@@ -110,14 +138,62 @@ a:hover {
 }
 
 .title-sections {
-  color: white;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-#catalogo {
-  background-color: rgb(49, 0, 97);
-  height: 200px;
-  
+.article-catalogo {
+  margin-top: 20px;
 }
+
+.title-article-productos {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text-sections {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);;
+  margin: 0px 20px 30px 20px;
+}
+
+.catalogo-productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.text-catalogo {
+  font-size: 20px;
+}
+
+.marca-catalogo {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  gap: 10px;
+}
+
+.title-catalogo{
+  font-size: 18px;
+}
+
+.image-sections {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+}
+
 
 .card {
   background-color: rgb(131, 131, 122);
@@ -126,105 +202,116 @@ a:hover {
   width: 50px;
 }
 
-
 .form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
-  padding: 50px;
+  height: auto;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1.5px;
+  gap: 20px;
+}
+
+.form-list {
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  display: grid;
+  padding-left: 0;
   gap: 20px;
 }
 
 .form-title {
-  color: rgb(255, 255, 255);
-  font-size: 25px;
+  margin-bottom: 0px;
   font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  margin: 15px 0px 20px 0px;
 }
 
-.form {
+.form-label {
+  color: black;
+  font-weight: 400;
+}
+
+.input {
+  height: 37px;
+  font-size: 18px;
+  padding-left: 7px;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.textarea {
+  font-size: 18px;
+  padding-left: 7px;
+  height: 140px;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.input-radio {
+  height: 15px;
+  width: 15px;
+}
+
+.input-square {
+  height: 20px;
+  width: 20px;
+}
+
+.input-option {
+  width: 80px;
+  font-size: 18px;
+  height: 35px;
+  border-color: transparent;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.form-div-title{
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.form-div {
+  margin-top: 10px;
+}
+.form-button {
+  background-color: rgb(255, 255, 255);
+  width: 180px;
+  height: 40px;
+  border: none;
   font-size: 22px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 1.5px;
-  color: rgb(255, 255, 255);
-  padding: 25px;
-  margin: 0 20px 5px 20px;
-}
-
-.form-input {
-  width: 500px;
-  list-style-type: none;
-  text-align: center;
-  display: grid;
-  gap: 10px;
-}
-
-/*
-.lif {
-  list-style-type: none;
+  font-weight: 450;
   text-decoration: none;
-  text-align: ;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin: 25px;
-  padding: 10px;
-}
-*/
-
-.p1 {
-  font-size: 22px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 1.5px;
-  color: rgb(255, 255, 255);
-  padding: 25px;
-  margin: 15px 20px 5px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
-
-.p3 {
-   font-size: 20px;
-   font-weight: 300;
-   text-align: center;
-   letter-spacing: 1.5px;
-   color: white;
-   padding: 20px;
-   margin: 15px 50px 25px 50px;
-}
-
-.p4 {
-  font-size: 20px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 1.5px;
-  color: white;
-  padding: 20px;
-  margin: 0px 50px 10px 50px;
-}
-
-.img1 {
-  width: 370px;
-  height: 230px;
-  margin: 0px 10px 0px 10px;
+.home-image {
+  width: 100%;
+  height: 220px;
+  margin: 0px 20px 30px 20px;
 }
 
 // ------- Footer ------- //
 
-footer {
-  color: white;
+#footer-container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(59, 59, 59);
   padding: 30px;
   margin: 40px 31px 45px 31px;
 }
 
-footer h2 {
+#footer-container h2 {
   font-size: 25px;
   font-weight: 500;
   text-align: center;
@@ -233,79 +320,163 @@ footer h2 {
   margin: 15px 0px 20px 0px;
 }
 
-.ul1 {
+.info-footer-container {
   display: flex;
   flex-direction: column;
   margin: 30px 10px 30px 10px;
-  padding: 20px 0px 20px 0px;
-
-
+  padding-left: 0;
+  gap: 10px;
 }
 
-.li2 {
-  font-size: 15px;
-  font-weight: 500;
-  display: block;
-  padding: 5px;
-  margin: 10px 0px 10px 10px;
+.info-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-.p2 {
-  font-size: 15px;
-  font-weight: 500;
-  padding: 5px;
-  margin: 25px 0px 5px 10px;
+.icon-footer {
+  height: 28px;
+  width: 28px;
 }
 
-.a2 {
+.text-footer {
+  font-size: 18px;
+}
+
+.link-footer {
   text-decoration: none;
   color: black;
 }
 
-
-.redes {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.iconos {
-  height: 48px;
-  width: 48px;
-}
-
-img {
-  width: 400px;
-  height: 250px;
-}
-
 // ------- Media ------- //
 
-@media (min-width: 500px) {}
-  
 @media (min-width: 768px) {
 
-  .img1 {
-    width: 600px;
-    height: 400px;
-    margin: 10px;
+  .brand {
+    font-size: 24px;
   }
-  img {
-    width: 500px;
-    height: 350px;
+
+  .main-home {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .title-sections {
+    font-size: 26px;
+  }
+
+  .article-catalogo {
+    margin-top: 30px;
+  }
+
+  .title-article-productos {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .text-catalogo {
+    font-size: 18px;
+  }
+  
+  .marca-catalogo {
+    height: 80px;
+    gap: 20px;
+  }
+  
+  .title-catalogo{
+    font-size: 20px;
+  }
+  
+  .link-catalogo {
+    font-size: 18px;
+  }
+
+  .form-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .input {
+    font-size: 20px;
+    height: 40px;
+  }
+  
+  .textarea {
+    font-size: 20px;
+    height: 180px;
+  }
+
+  .image-sections {
+    height: 450px;
+    width: 650px;
+  }
+
+  .icon-footer {
+    height: 30px;
+    width: 30px;
   }
   
 }
 
 @media (min-width: 1024px) {
-  .header {
+
+  .navBar-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .brand {
+    font-size: 28px;
+    margin-left: 40px;
+  }
+  
+  .menu-container {
     height: 230px;
   }
-  header .nav { 
+
+  .menu-container .nav { 
     height: 200px;
     margin: 30px 30px 30px 30px;
   }
-  .ul-flex {
+
+  .main-home {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .title-sections {
+    font-size: 28px;
+  }
+
+  .article-catalogo {
+    margin-top: 70px;
+  }
+
+  .title-article-productos {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .text-catalogo {
+    font-size: 20px;
+  }
+  
+  .marca-catalogo {
+    flex-direction: row;
+    height: 50px;
+    gap: 25px;
+  }
+  
+  .title-catalogo{
+    font-size: 22px;
+  }
+  
+  .link-catalogo {
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .nav-list {
     width: 100%;
     height: 50px;
     padding: 10px 0px 10px 0px;
@@ -314,20 +485,35 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-  .ul-flex li {
+
+  .nav-list li {
     height: 50px;
-    padding: 10px
+    padding: 10px;
+  }
+
+  .form-container {
+    padding-left: 300px;
+    padding-right: 300px;
   }
   
-  .img1 {
-    width: 800px;
-    height: 500px;
-    margin: 1px;
-    padding: 1px;
+  .input {
+    font-size: 22px;
+    height: 40px;
   }
-  img {
-    width: 600px;
-    height: 350px;
+  
+  .textarea {
+    font-size: 22px;
+    height: 200px;
+  }
+
+  .image-sections {
+    height: 650px;
+    width: 850px;
+  }
+
+  .icon-footer {
+    height: 32px;
+    width: 32px;
   }
   
 }
